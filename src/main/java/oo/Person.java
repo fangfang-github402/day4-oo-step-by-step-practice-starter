@@ -4,6 +4,11 @@ import java.util.Objects;
 
 public class Person {
     private  Integer id;
+
+    public String getName() {
+        return name;
+    }
+
     private  String name;
     private  Integer age;
 
