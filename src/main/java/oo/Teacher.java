@@ -13,6 +13,8 @@ public class Teacher extends Person {
     }
 
     public String introduce() {
+        if(techClasses.isEmpty())
+            return super.introduce() + " I am a teacher.";
         String classes = techClasses.stream().map(techClass -> String.valueOf(techClass.getNumber())).collect(Collectors.joining(", "));
         return super.introduce() + " I am a teacher. " + "I teach Class " + classes + ".";
     }

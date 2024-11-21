@@ -10,7 +10,7 @@ public class Student extends Person {
 
     public String introduce() {
         if(this.klass == null)
-            return super.introduce() + " I am a student. ";
+            return super.introduce() + " I am a student.";
         if(this.klass.isLeader(this))
             return super.introduce() + " I am a student. I am the leader of class " + this.klass.getNumber()+".";
         return super.introduce() + " I am a student. I am in class " + this.klass.getNumber()+".";
