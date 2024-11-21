@@ -1,7 +1,5 @@
 package oo;
 
-import java.util.Objects;
-
 public class Student extends Person {
     private Klass klass;
 
