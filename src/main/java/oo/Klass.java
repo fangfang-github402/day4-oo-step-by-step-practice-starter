@@ -3,6 +3,7 @@ package oo;
 import java.util.Objects;
 
 public class Klass {
+    public static final String IS_NOT_ONE_OF_US = "It is not one of us.";
     private int number;
 
     private Student leader;
@@ -48,7 +49,7 @@ public class Klass {
                 System.out.println("I am " + this.attach_student.getName() + ", student of Class " + number + ". I know " + leader.getName() + " become Leader.");
             }
         } else {
-            System.out.println("It is not one of us.");
+            System.out.println(IS_NOT_ONE_OF_US);
         }
     }
 
