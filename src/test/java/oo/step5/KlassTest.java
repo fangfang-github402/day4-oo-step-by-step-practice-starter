@@ -19,13 +19,13 @@ public class KlassTest {
 //        System.setOut(new PrintStream(outContent));
 //    }
 //
-//    @Test
-//    public void should_return_false_when_isLeader_given_student_is_not_in_the_class() {
-//        Student tom = new Student(1, "Tom", 21);
-//        Klass klass = new Klass(1);
-//
-//        assertThat(klass.isLeader(tom)).isFalse();
-//    }
+    @Test
+    public void should_return_false_when_isLeader_given_student_is_not_in_the_class() {
+        Student tom = new Student(1, "Tom", 21);
+        Klass klass = new Klass(1);
+
+        assertThat(klass.isLeader(tom)).isFalse();
+    }
 //
 //    @Test
 //    public void should_return_false_when_isLeader_given_student_is_in_the_class_but_not_the_leader() {
