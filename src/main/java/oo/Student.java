@@ -23,6 +23,6 @@ public class Student extends Person {
     public boolean isIn(Klass klass) {
         if(this.klass == null)
             return false;
-        return this.klass.getNumber() == klass.getNumber();
+        return this.klass.equals(klass);
     }
 }
