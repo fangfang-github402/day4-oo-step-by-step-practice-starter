@@ -12,13 +12,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class KlassTest {
 
-//    private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-//
-//    @BeforeEach
-//    public void setup() {
-//        System.setOut(new PrintStream(outContent));
-//    }
-//
+    private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
+    @BeforeEach
+    public void setup() {
+        System.setOut(new PrintStream(outContent));
+    }
+
     @Test
     public void should_return_false_when_isLeader_given_student_is_not_in_the_class() {
         Student tom = new Student(1, "Tom", 21);
@@ -49,18 +49,18 @@ public class KlassTest {
 
         assertThat(isLeader).isTrue();
     }
-//
-//    @Test
-//    public void should_print_prompt_message_when_assign_leader_given_student_is_not_in_class() throws Exception {
-//        Student tom = new Student(1, "Tom", 21);
-//        Klass klass = new Klass(1);
-//
-//        klass.assignLeader(tom);
-//
-//        assertThat(systemOut()).contains("It is not one of us.");
-//    }
-//
-//    private String systemOut() {
-//        return outContent.toString();
-//    }
+
+    @Test
+    public void should_print_prompt_message_when_assign_leader_given_student_is_not_in_class() throws Exception {
+        Student tom = new Student(1, "Tom", 21);
+        Klass klass = new Klass(1);
+
+        klass.assignLeader(tom);
+
+        assertThat(systemOut()).contains("It is not one of us.");
+    }
+
+    private String systemOut() {
+        return outContent.toString();
+    }
 }
