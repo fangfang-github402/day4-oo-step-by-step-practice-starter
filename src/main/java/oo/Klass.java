@@ -33,4 +33,8 @@ public class Klass {
             return false;
         return leader.equals(student);
     }
+
+    public void assignLeader(Student student) {
+        this.leader = student;
+    }
 }
