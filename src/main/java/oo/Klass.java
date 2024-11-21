@@ -29,16 +29,15 @@ public class Klass {
     }
 
     public boolean isLeader(Student student) {
-        if(leader == null)
+        if (leader == null)
             return false;
         return leader.equals(student);
     }
 
     public void assignLeader(Student student) {
-        if(student.isIn(this)){
+        if (student.isIn(this)) {
             this.leader = student;
-        }
-        else{
+        } else {
             System.out.println("It is not one of us.");
         }
     }
