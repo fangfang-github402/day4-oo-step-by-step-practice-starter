@@ -24,4 +24,8 @@ public class Teacher extends Person{
     public boolean belongsTo(Klass klass) {
         return techClasses.contains(klass);
     }
+
+    public boolean isTeaching(Student student) {
+        return !techClasses.stream().filter(techClass ->student.isIn(techClass)).collect(Collectors.toList()).isEmpty();
+    }
 }
