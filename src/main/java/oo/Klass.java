@@ -9,6 +9,8 @@ public class Klass {
 
     private Teacher attach_teacher;
 
+    private Student attach_student;
+
     public Klass(int number) {
         this.number = number;
     }
@@ -39,7 +41,12 @@ public class Klass {
     public void assignLeader(Student student) {
         if (student.isIn(this)) {
             this.leader = student;
-            System.out.println("I am " + this.attach_teacher.getName() + ", teacher of Class " + number + ". I know " + leader.getName() + " become Leader.");
+            if (attach_teacher != null) {
+                System.out.println("I am " + this.attach_teacher.getName() + ", teacher of Class " + number + ". I know " + leader.getName() + " become Leader.");
+            }
+            if (attach_student != null) {
+                System.out.println("I am " + this.attach_student.getName() + ", student of Class " + number + ". I know " + leader.getName() + " become Leader.");
+            }
         } else {
             System.out.println("It is not one of us.");
         }
@@ -47,5 +54,9 @@ public class Klass {
 
     public void attach(Teacher teacher) {
         this.attach_teacher = teacher;
+    }
+
+    public void attach(Student student) {
+        this.attach_student = student;
     }
 }
