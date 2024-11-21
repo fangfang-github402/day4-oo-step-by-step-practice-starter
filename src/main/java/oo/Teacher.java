@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Teacher extends Person{
+public class Teacher extends Person {
     private List<Klass> techClasses;
 
     public Teacher(Integer id, String name, Integer age) {
@@ -17,7 +17,7 @@ public class Teacher extends Person{
         return super.introduce() + " I am a teacher. " + "I teach Class " + classes + ".";
     }
 
-    public void assignTo(Klass klass){
+    public void assignTo(Klass klass) {
         techClasses.add(klass);
     }
 
@@ -26,6 +26,6 @@ public class Teacher extends Person{
     }
 
     public boolean isTeaching(Student student) {
-        return !techClasses.stream().filter(techClass ->student.isIn(techClass)).collect(Collectors.toList()).isEmpty();
+        return !techClasses.stream().filter(techClass -> student.isIn(techClass)).collect(Collectors.toList()).isEmpty();
     }
 }
