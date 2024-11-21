@@ -2,17 +2,19 @@ package oo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Teacher extends Person{
-    List<Klass> techClasses = new ArrayList<>();
+    private List<Klass> techClasses;
 
     public Teacher(Integer id, String name, Integer age) {
         super(id, name, age);
+        this.techClasses = new ArrayList<>();
     }
 
-    @Override
     public String introduce() {
-        return super.introduce()+" I am a teacher.";
+        String classes = techClasses.stream().map(techClass -> String.valueOf(techClass.getNumber())).collect(Collectors.joining(","));
+        return super.introduce() + " I am a teacher. " + "I teach Class " + classes + ".";
     }
 
     public void assignTo(Klass klass){
