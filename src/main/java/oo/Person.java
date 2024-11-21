@@ -3,14 +3,14 @@ package oo;
 import java.util.Objects;
 
 public class Person {
-    private  Integer id;
+    private Integer id;
 
     public String getName() {
         return name;
     }
 
-    private  String name;
-    private  Integer age;
+    private String name;
+    private Integer age;
 
     public Person(Integer id, String name, Integer age) {
         this.id = id;
@@ -18,8 +18,8 @@ public class Person {
         this.age = age;
     }
 
-    public String introduce(){
-        return "My name is " + name + ". I am " + age +" years old.";
+    public String introduce() {
+        return "My name is " + name + ". I am " + age + " years old.";
     }
 
     @Override
